@@ -68,7 +68,7 @@
             this.tabContainer.Controls.Add(this.tabPage1);
             this.tabContainer.Controls.Add(this.tabPage2);
             this.tabContainer.Controls.Add(this.tabPage3);
-            this.tabContainer.ItemSize = new System.Drawing.Size(58, 28);
+            this.tabContainer.ItemSize = new System.Drawing.Size(0, 1);
             this.tabContainer.Location = new System.Drawing.Point(-4, -5);
             this.tabContainer.Name = "tabContainer";
             this.tabContainer.SelectedIndex = 0;
@@ -82,10 +82,10 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.btnMiflash);
             this.tabPage1.Controls.Add(this.checkBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 32);
+            this.tabPage1.Location = new System.Drawing.Point(4, 5);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(417, 255);
+            this.tabPage1.Size = new System.Drawing.Size(417, 282);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -343,14 +343,14 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 100000;
+            this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(418, 278);
+            this.ClientSize = new System.Drawing.Size(418, 255);
             this.Controls.Add(this.tabContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
