@@ -1,0 +1,16 @@
+c:\users\hoaithy\documents\visual studio 2012\Projects\InstallTWRP_HoaiThy\InstallTWRP\bin\Debug\InstallTWRP.exe
+c:\users\hoaithy\documents\visual studio 2012\Projects\InstallTWRP_HoaiThy\InstallTWRP\bin\Debug\InstallTWRP.pdb
+c:\users\hoaithy\documents\visual studio 2012\Projects\InstallTWRP_HoaiThy\InstallTWRP\obj\Debug\InstallTWRP.csprojResolveAssemblyReference.cache
+c:\users\hoaithy\documents\visual studio 2012\Projects\InstallTWRP_HoaiThy\InstallTWRP\obj\Debug\InstallTWRP.Form1.resources
+c:\users\hoaithy\documents\visual studio 2012\Projects\InstallTWRP_HoaiThy\InstallTWRP\obj\Debug\InstallTWRP.Properties.Resources.resources
+c:\users\hoaithy\documents\visual studio 2012\Projects\InstallTWRP_HoaiThy\InstallTWRP\obj\Debug\InstallTWRP.csproj.GenerateResource.Cache
+c:\users\hoaithy\documents\visual studio 2012\Projects\InstallTWRP_HoaiThy\InstallTWRP\obj\Debug\InstallTWRP.exe
+c:\users\hoaithy\documents\visual studio 2012\Projects\InstallTWRP_HoaiThy\InstallTWRP\obj\Debug\InstallTWRP.pdb
+E:\Downloads\Compressed\Visual\InstallTWRP_HoaiThy\InstallTWRP\obj\Debug\InstallTWRP.exe
+E:\Downloads\Compressed\Visual\InstallTWRP_HoaiThy\InstallTWRP\obj\Debug\InstallTWRP.pdb
+E:\Downloads\Compressed\Visual\InstallTWRP_HoaiThy\InstallTWRP\bin\Debug\InstallTWRP.exe
+E:\Downloads\Compressed\Visual\InstallTWRP_HoaiThy\InstallTWRP\bin\Debug\InstallTWRP.pdb
+E:\Downloads\Compressed\Visual\InstallTWRP_HoaiThy\InstallTWRP\obj\Debug\InstallTWRP.Form1.resources
+E:\Downloads\Compressed\Visual\InstallTWRP_HoaiThy\InstallTWRP\obj\Debug\InstallTWRP.Properties.Resources.resources
+E:\Downloads\Compressed\Visual\InstallTWRP_HoaiThy\InstallTWRP\obj\Debug\InstallTWRP.csproj.GenerateResource.Cache
+E:\Downloads\Compressed\Visual\InstallTWRP_HoaiThy\InstallTWRP\obj\Debug\InstallTWRP.csprojResolveAssemblyReference.cache
