@@ -96,12 +96,13 @@ namespace InstallTWRP
         {
             if (tabId == 0)
             {
-                fastbootEnableControl(isFastboot());
+                btnConfirm.Enabled = false;
+                fastbootEnableControl();
             }
             tabContainer.SelectedIndex = tabId;
         }
 
-        
+
 
         private ProcessStartInfo getStartInfo(string cmd)
         {
@@ -116,7 +117,7 @@ namespace InstallTWRP
             return startInfo;
         }
 
-        
+
 
         private string isDeviceAvailable(Process proc)
         {
@@ -162,21 +163,12 @@ namespace InstallTWRP
         {
             Process proc = getProcess("fastboot devices");
             string device = isDeviceAvailable(proc);
-            if (device.Equals(""))
-            {
-                refreshDevice(false, "");
-                return false;
-            }
-            else
-            {
-                refreshDevice(true, device);
-                return true;
-            }
+            return !device.Equals("");
         }
 
-        private void fastbootEnableControl(Boolean isFastboot)
+        private void fastbootEnableControl()
         {
-            if (isFastboot)
+            if (isFastboot())
             {
                 rdoFastboot.Enabled = true;
                 rdoFastboot.Checked = true;
@@ -194,20 +186,22 @@ namespace InstallTWRP
         {
             if (!isStickUSBDebbug)
             {
-                lblDevice.Text = "null";
-                //MessageBox.Show("Hãy mở USB Debbug (gỡ lỗi USB) trên điện thoại và cài đặt MiFlash", "Không tìm thấy thiết bị", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                lblDevice.ForeColor = Color.Red;
-                lblColor.ForeColor = Color.Red;
-                fastbootEnableControl(false);
+                refreshLabel("null", Color.Red);
             }
             else
             {
-                lblDevice.Text = device;
-                lblDevice.ForeColor = Color.Green;
-                lblColor.ForeColor = Color.Green;
-                fastbootEnableControl(true);
+                refreshLabel(device, Color.Green);
+                fastbootEnableControl();
             }
             return isStickUSBDebbug;
+        }
+
+        private void refreshLabel(string str, Color color)
+        {
+            lblDevice.Text = str;
+            //MessageBox.Show("Hãy mở USB Debbug (gỡ lỗi USB) trên điện thoại và cài đặt MiFlash", "Không tìm thấy thiết bị", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            lblDevice.ForeColor = color;
+            lblColor.ForeColor = color;
         }
 
         private Process getProcess(string cmd)
@@ -274,6 +268,18 @@ namespace InstallTWRP
             System.Diagnostics.Process.Start(url);
         }
 
+        private void btnConfirmEnabled()
+        {
+            if (lblColor.ForeColor == Color.Green && !textBox1.Text.Equals(""))
+            {
+                btnConfirm.Enabled = true;
+            }
+            else
+            {
+                btnConfirm.Enabled = false;
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult result = ofdTWRP.ShowDialog();
@@ -288,14 +294,7 @@ namespace InstallTWRP
                         backupTwrpName = filenames;
                         isCopy = false;
                     }
-                    if (lblColor.ForeColor == Color.Green)
-                    {
-                        btnConfirm.Enabled = true;
-                    }
-                    else
-                    {
-                        btnConfirm.Enabled = true;
-                    }
+                    btnConfirmEnabled();
                 }
                 else
                 {
@@ -318,6 +317,9 @@ namespace InstallTWRP
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            if (tabContainer.SelectedIndex != 0)
+                return;
+            btnConfirmEnabled();
             initDevice();
         }
     }
